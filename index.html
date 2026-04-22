@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Efe Akpikie — CS + Math (UVic). Software engineering, data science, probability, and quantitative methods.">
+    <meta name="keywords" content="data science, statistics, machine learning, computer science, mathematics">
+    <meta property="og:title" content="Efe Akpikie | Math · SWE · Data · Quant">
+    <meta property="og:description" content="Models, systems, and markets — probability, ML pipelines, and careful code.">
+    <meta property="og:type" content="website">
+    <title>Efe Akpikie | Math · SWE · Data · Quant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><span class="nav-logo-mark">∫</span> Efe Akpikie</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#coursework" class="nav-link">Coursework</a></li>
+                
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-gradient"></div>
+            <canvas class="hero-clt-canvas" id="heroCltCanvas" role="presentation"></canvas>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-kicker"><span class="mono">CS + Math</span> · University of Victoria</p>
+                <h1 class="hero-title" id="heroTitle">Hi, I'm Efe Akpikie</h1>
+                <p class="hero-equation mono" aria-hidden="true">arg min<sub>θ</sub> ℒ(θ) + λ‖θ‖₁</p>
+                <div class="hero-pills" role="list">
+                    <span class="hero-pill" role="listitem">Probability & inference</span>
+                    <span class="hero-pill" role="listitem">ML & pipelines</span>
+                    <span class="hero-pill" role="listitem">Systems & C/C++</span>
+                    <span class="hero-pill" role="listitem">Markets & optimization</span>
+                </div>
+                <p class="hero-tagline">Building rigorous models and dependable software at the intersection of <strong>mathematics</strong>, <strong>data science</strong>, and <strong>quantitative thinking</strong>.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Efe-Akpikie" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/efe-akpikie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:eakpikie@gmail.com" id="emailLink" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="Efe's_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index mono">01</span> About</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p> I'm Efe, a 2nd year student at UVIC studying computer Science and Mathematics student with a passion for learning theoretical and abstract topics. My coursework and projects have given me a strong foundation in statistical inference and software engineering.</p>
+                    <p>I enjoy working on problems that combine mathematical rigor with practical applications, whether that's building predictive models, analyzing datasets, or creating tools that help people make better decisions.</p>
+                    <h3>Currently looking for</h3>
+                    <ul class="about-list">
+                        <li>Data Science/Analysis internships for Summer 2026</li>
+                        <li>Software Engineering internships related to C/C++, Python or Java for Summer 2026</li>
+                        <li>Quantitative Finance related internships for Summer 2026</li>
+                    </ul>
+                </div>
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4 class="education-degree">BSc, Computer Science and Mathematics (Combined Major)</h4>
+                        <p class="education-minor">Minor in Data Science</p>
+                        <p class="education-school">University of Victoria</p>
+                        <p class="education-date">September 2024 - June 2028</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index mono">02</span> Skills</h2>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">JavaScript/HTML/CSS</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C/C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Data & ML</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TidyVerse</span>
+                            <span class="skill-tag">Jupyter lab</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">SciPy</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Google Analytics</span>
+                            <span class="skill-tag">Google Cloud Platform</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="strengths-section">
+                    <h3 class="strengths-title">Other Skills</h3>
+                    <ul class="strengths-list">
+                        <li>
+                            <strong>Data Analysis:</strong> EDA, Regression, data visualisation, hypothesis testing
+                        </li>
+                        <li>
+                            <strong>Software Engineering:</strong> Writing clean & modular code, version control, testing, documentation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-random-walk">
+        <canvas class="random-walk-canvas" id="projectsRandomWalkCanvas" aria-hidden="true"></canvas>
+        <div class="container">
+            <h2 class="section-title"><span class="section-index mono">03</span> Selected Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3 class="project-title">AI investment Assistant(Ongoing)</h3>
+                    <p class="project-description">An AI-driven platform for real-time stock analysis, portfolio tracking, and personalized investment insights, combining live market data with a stock grading system and interactive visualizations.</p>
+                    <ul class="project-highlights">
+                        <li>Real-time market data with interactive charts and multi-timeframe technical analysis</li>
+                        <li>AI advisor for risk assessment, portfolio optimization, and actionable insights</li>
+                        <li>Portfolio tracking and performance metrics</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">FastAPI</span>
+                        <span class="project-tag">PostgreSQL(integration ongoing)</span>
+                        <span class="project-tag">Google Cloud(Integration ongoing)</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Efe-Akpikie/ai-investment-assistant" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                        <a href="AI.png" target="_blank" rel="noopener noreferrer" class="project-link">Screenshot</a>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <h3 class="project-title">Final Grade Prediction Using Regression</h3>
+                    <p class="project-description">Exploratory data analysis and Regression on student grade dataset</p>
+                    <ul class="project-highlights">
+                        <li>Built Linear Regression model to predict final grades (G3) using student performance dataset from Kaggle</li>
+                        <li>Identified G2 (second period grade) as strongest predictor with 0.95 correlation coefficient</li>
+                        <li>Found school support (0.75) and family relationships (0.28) positively correlate with performance, while extracurricular activities (-0.58) and romantic relationships (-0.40) show negative correlations</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag">Jupyter</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Efe-Akpikie/Student-grade-prediction" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                        <a href="https://nbviewer.org/github/Efe-Akpikie/Student-grade-prediction/blob/main/Student_Grade_Prediction.ipynb" target="_blank" rel="noopener noreferrer" class="project-link">Notebook</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-title">Portfolio Optimization Dashboard</h3>
+                    <p class="project-description">Streamlit dashboard for Markowitz Mean-Variance portfolio optimization with up to 20 stocks.</p>
+                    <ul class="project-highlights">
+                        <li>Multiple optimization objectives: Max Sharpe, Min Volatility, Target Return, Max Sortino</li>
+                        <li>Efficient frontier visualization with correlation heatmaps and portfolio analytics</li>
+                        <li>Interactive Plotly charts with robust error handling and data validation</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Streamlit</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Pandas</span>
+                        <span class="project-tag">NumPy</span>
+                        <span class="project-tag">SciPy</span>
+                        <span class="project-tag">Plotly</span>
+                        <span class="project-tag">yfinance</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Efe-Akpikie/Markowitz-model-implementation" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                        <a href="https://portfolio-simulation-tool.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-footer">
+                <p>Explore more projects on <a href="https://github.com/Efe-Akpikie" target="_blank" rel="noopener noreferrer" class="github-link">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index mono">04</span> Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Data Analyst Intern</h3>
+                        <span class="experience-date">July 2025 - August 2025</span>
+                    </div>
+                    <p class="experience-org">LOCVM</p>
+                    <ul class="experience-details">
+                        <li>Designed and implemented an automated ETL pipeline for LOCVM: extracted locum placement and page engagement data from Google Analytics/Search Console, standardized it with R, and stored results in a custom MongoDB database.</li>
+                        <li>Built an interactive dashboard in R using the Shiny library that extracts data from the database and analyzes various KPI’s relating to page engagement and locum placement trends.</li>
+                        <li>Containerized the dashboard and ETL pipeline with Docker, maintained in GitHub, and deployed to GCP Cloud Run with automated updates; ETL scheduling handled via a GCP virtual machine.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Software Engineer</h3>
+                        <span class="experience-date"> Sept 2025 - Present</span>
+                    </div>
+                    <p class="experience-org">UVic Robotics Club</p>
+                    <ul class="experience-details">
+                        <li>Developer for the rover perception system for the Canadian International Rover Competition(CIRC).</li>
+                        <li>Currently developing a ROS-based ArUco marker detection system using OpenCV to perform real-time marker tracking from ZED2i camera video streams, enabling 3D position and orientation estimation.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p class="experience-org">Other: UVIC Quant Club</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Coursework Section -->
+    <section id="coursework" class="section section-random-walk">
+        <canvas class="random-walk-canvas" id="courseworkRandomWalkCanvas" aria-hidden="true"></canvas>
+        <div class="container">
+            <h2 class="section-title"><span class="section-index mono">05</span> Relevant Coursework</h2>
+            <div class="coursework-grid">
+                <div class="coursework-group">
+                    <h3 class="coursework-group-title">Computer Science</h3>
+                    <ul class="coursework-list">
+                        <li>CSC225: Data Structures & Algorithms</li>
+                        <li>SENG265: Software Development Methods</li>
+                        <li>CSC230: Computer Architecture</li>
+                    </ul>
+                </div>
+                <div class="coursework-group">
+                    <h3 class="coursework-group-title">Mathematics</h3>
+                    <ul class="coursework-list">
+                        <li> Math211: Matrix Algebra</li>
+                        <li> Math200: Multivariable Calculus</li>
+                        <li> Math122 & Math222: Discrete Mathematics</li>
+                    </ul>
+                </div>
+                <div class="coursework-group">
+                    <h3 class="coursework-group-title">Statistics</h3>
+                    <ul class="coursework-list">
+                        <li>Stat260: Introduction to probability and Statistics I</li>
+                        <li>Stat123: Data Science </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Efe Akpikie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
